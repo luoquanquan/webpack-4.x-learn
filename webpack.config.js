@@ -1,5 +1,6 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   mode: 'development', // development or production
@@ -14,11 +15,7 @@ module.exports = {
       {
         test: /\.css$/,
         use: [
-          // 把 css 作为 style 标签添加到 head 中
-          {
-            loader: 'style-loader',
-            options: { }
-          },
+          MiniCssExtractPlugin.loader,
           // 处理 @import 语法
           'css-loader'
         ]
@@ -45,6 +42,9 @@ module.exports = {
         removeAttributeQuotes: true,
       },
       hash: true
+    }),
+    new MiniCssExtractPlugin({
+      filename: 'main.css'
     })
   ],
   // 开发服务配置

@@ -14,4 +14,22 @@
 
 `less-loader`: 配合 `less` 处理 less 语法 `less -> css`
 
-
+`mini-css-extract-plugin`: 提取 css 文件为单独文件, 不打包到 js 模块中
+```js
+module: {
+  rules: [
+    {
+      test: /\.css$/,
+      use: [
+        MiniCssExtractPlugin.loader,
+        'css-loader'
+      ]
+    },
+  ]
+},
+plugins: [
+  new MiniCssExtractPlugin({
+    filename: 'main.css'
+  })
+],
+```
