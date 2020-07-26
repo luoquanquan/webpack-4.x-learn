@@ -6,6 +6,14 @@
 
 执行顺序: 当多个 loader 时, 执行的顺序是从右向左
 
+#### 分类
+
+`expose-loader`:暴露全局的 loader / 内联的 loader
+`pre`: 前置 loader
+`normal`: 普通 loader
+`inline`: 内联 loader
+`post`: 后置 loader
+
 ### 样式处理
 
 `style-loader`: 把 css 作为 style 标签添加到 html 的 head 标签中
@@ -47,3 +55,4 @@ plugins: [
 `@babel/plugin-proposal-decorators`: 类装饰器语法转码 [文档](https://babel.docschina.org/docs/en/next/babel-plugin-proposal-decorators)
 `@babel/plugin-proposal-class-properties` 类属性转码 [文档](https://babel.docschina.org/docs/en/babel-plugin-proposal-class-properties)
 `@babel/plugin-transform-runtime` & `@babel/runtime`: 用来重用 babel 注入 js 文件中的代码, 解决 callCheck 定义多次的问题 [文档](https://babeljs.io/docs/en/babel-plugin-transform-runtime#docsNav)
+`core-js`: [github](https://github.com/zloirock/core-js)
