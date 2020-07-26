@@ -10,7 +10,12 @@ module.exports = {
     path: path.resolve(__dirname, 'dist')
   },
   plugins: [
-    new HtmlWebpackPlugin()
+    new HtmlWebpackPlugin({
+      minify: {
+        removeAttributeQuotes: true,
+      },
+      hash: true
+    })
   ],
   // 开发服务配置
   devServer: {
