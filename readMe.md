@@ -6,7 +6,7 @@
 
 执行顺序: 当多个 loader 时, 执行的顺序是从右向左
 
-#### 样式处理
+### 样式处理
 
 `style-loader`: 把 css 作为 style 标签添加到 html 的 head 标签中
 `css-loader`: 解析 **@import**(css 原生支持的模块化) 语法
@@ -35,3 +35,7 @@ plugins: [
 `optimize-css-assets-webpack-plugin`: 压缩 css 的插件, 因为使用该插件压缩 css 需要重写 `optimization > minimizer`, 导致 webpack 自带的 js 压缩能力失效, 所以需要引入 js 压缩.
 `uglifyjs-webpack-plugin`: 压缩 js 文件的插件, 压缩 js 前需要先利用 babel 将 es6+ 语法转码
 `terser-webpack-plugin`: 压缩 js 文件的插件, 支持 es6+ js 文件直接压缩
+
+### js 文件处理
+
+#### babel 转化 es6+ 语法到浏览器可执行的版本

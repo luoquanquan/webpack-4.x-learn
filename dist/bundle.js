@@ -117,13 +117,13 @@ ___CSS_LOADER_EXPORT___.push([module.i, "body div {\n  border: 1px solid #123456
 
 "use strict";
 
-
 /*
   MIT License http://www.opensource.org/licenses/mit-license.php
   Author Tobias Koppers @sokra
 */
 // css base code, injected by the css-loader
 // eslint-disable-next-line func-names
+
 module.exports = function (useSourceMap) {
   var list = []; // return the list of modules as css string
 
@@ -500,8 +500,7 @@ module.exports = function (list, options) {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = 'a.js'
-
+module.exports = 'a.js';
 
 /***/ }),
 
@@ -523,18 +522,18 @@ module.exports = 'a.js'
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-const a = __webpack_require__(/*! ./a */ "./src/a.js")
-__webpack_require__(/*! ./index.css */ "./src/index.css")
-__webpack_require__(/*! ./index.less */ "./src/index.less")
+var a = __webpack_require__(/*! ./a */ "./src/a.js");
 
-const fn = () => {
-  console.log('function fn ~')
-}
+__webpack_require__(/*! ./index.css */ "./src/index.css");
 
-fn()
+__webpack_require__(/*! ./index.less */ "./src/index.less");
 
-console.log(a)
+var fn = function fn() {
+  console.log('function fn ~');
+};
 
+fn();
+console.log(a);
 
 /***/ }),
 
