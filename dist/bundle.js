@@ -103,25 +103,6 @@ module.exports = _interopRequireDefault;
 
 /***/ }),
 
-/***/ "./node_modules/expose-loader/dist/cjs.js?exposes[]=$&exposes[]=jQuery!./node_modules/jquery/dist/jquery-exposed.js":
-/*!**************************************************************************************************************************!*\
-  !*** ./node_modules/expose-loader/dist/cjs.js?exposes[]=$&exposes[]=jQuery!./node_modules/jquery/dist/jquery-exposed.js ***!
-  \**************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var ___EXPOSE_LOADER_IMPORT___ = __webpack_require__(/*! -!./jquery.js */ "./node_modules/jquery/dist/jquery.js");
-var ___EXPOSE_LOADER_GET_GLOBAL_THIS___ = __webpack_require__(/*! ../../expose-loader/dist/runtime/getGlobalThis.js */ "./node_modules/expose-loader/dist/runtime/getGlobalThis.js");
-var ___EXPOSE_LOADER_GLOBAL_THIS___ = ___EXPOSE_LOADER_GET_GLOBAL_THIS___;
-if (typeof ___EXPOSE_LOADER_GLOBAL_THIS___["$"] === 'undefined') ___EXPOSE_LOADER_GLOBAL_THIS___["$"] = ___EXPOSE_LOADER_IMPORT___;
-else throw new Error('[exposes-loader] The "$" value exists in the global scope, it may not be safe to overwrite it, use the "override" option')
-if (typeof ___EXPOSE_LOADER_GLOBAL_THIS___["jQuery"] === 'undefined') ___EXPOSE_LOADER_GLOBAL_THIS___["jQuery"] = ___EXPOSE_LOADER_IMPORT___;
-else throw new Error('[exposes-loader] The "jQuery" value exists in the global scope, it may not be safe to overwrite it, use the "override" option')
-module.exports = ___EXPOSE_LOADER_IMPORT___;
-
-
-/***/ }),
-
 /***/ "./node_modules/expose-loader/dist/runtime/getGlobalThis.js":
 /*!******************************************************************!*\
   !*** ./node_modules/expose-loader/dist/runtime/getGlobalThis.js ***!
@@ -164,6 +145,25 @@ module.exports = function () {
   return g;
 }();
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
+
+/***/ }),
+
+/***/ "./node_modules/jquery/dist/jquery-exposed.js":
+/*!****************************************************!*\
+  !*** ./node_modules/jquery/dist/jquery-exposed.js ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var ___EXPOSE_LOADER_IMPORT___ = __webpack_require__(/*! -!./jquery.js */ "./node_modules/jquery/dist/jquery.js");
+var ___EXPOSE_LOADER_GET_GLOBAL_THIS___ = __webpack_require__(/*! ../../expose-loader/dist/runtime/getGlobalThis.js */ "./node_modules/expose-loader/dist/runtime/getGlobalThis.js");
+var ___EXPOSE_LOADER_GLOBAL_THIS___ = ___EXPOSE_LOADER_GET_GLOBAL_THIS___;
+if (typeof ___EXPOSE_LOADER_GLOBAL_THIS___["$"] === 'undefined') ___EXPOSE_LOADER_GLOBAL_THIS___["$"] = ___EXPOSE_LOADER_IMPORT___;
+else throw new Error('[exposes-loader] The "$" value exists in the global scope, it may not be safe to overwrite it, use the "override" option')
+if (typeof ___EXPOSE_LOADER_GLOBAL_THIS___["jQuery"] === 'undefined') ___EXPOSE_LOADER_GLOBAL_THIS___["jQuery"] = ___EXPOSE_LOADER_IMPORT___;
+else throw new Error('[exposes-loader] The "jQuery" value exists in the global scope, it may not be safe to overwrite it, use the "override" option')
+module.exports = ___EXPOSE_LOADER_IMPORT___;
+
 
 /***/ }),
 
@@ -11094,10 +11094,9 @@ module.exports = g;
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
 
-var _exposeLoaderExposes$ExposesJQueryJquery = _interopRequireDefault(__webpack_require__(/*! expose-loader?exposes[]=$&exposes[]=jQuery!jquery */ "./node_modules/expose-loader/dist/cjs.js?exposes[]=$&exposes[]=jQuery!./node_modules/jquery/dist/jquery-exposed.js"));
+var _jquery = _interopRequireDefault(__webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery-exposed.js"));
 
-// eslint-disable-next-line
-console.log(_exposeLoaderExposes$ExposesJQueryJquery["default"]);
+console.log(_jquery["default"]);
 console.log(window.$); // const a = require('./a')
 // require('./index.css')
 // require('./index.less')

@@ -56,3 +56,4 @@ plugins: [
 `@babel/plugin-proposal-class-properties` 类属性转码 [文档](https://babel.docschina.org/docs/en/babel-plugin-proposal-class-properties)
 `@babel/plugin-transform-runtime` & `@babel/runtime`: 用来重用 babel 注入 js 文件中的代码, 解决 callCheck 定义多次的问题 [文档](https://babeljs.io/docs/en/babel-plugin-transform-runtime#docsNav)
 `core-js`: [github](https://github.com/zloirock/core-js)
+`expose-loader`: The expose-loader loader allows to expose a module (in whole or in part) to global object (self, window and global).
