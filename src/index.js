@@ -19,7 +19,7 @@ class A {
 const tempa = new A()
 console.log(tempa)
 
-function log(target) {
+function log (target) {
   console.log(`当前时间 ${Date.now()}: debug 的数据是 target: `, target)
 }
 

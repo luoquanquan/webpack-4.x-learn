@@ -1,8 +1,8 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const TerserJSPlugin = require('terser-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
+const TerserJSPlugin = require('terser-webpack-plugin')
 
 module.exports = {
   mode: 'development', // development or production
@@ -17,10 +17,19 @@ module.exports = {
     minimizer: [
       new OptimizeCSSAssetsPlugin(),
       new TerserJSPlugin()
-    ],
+    ]
   },
   module: {
     rules: [
+      {
+        test: /\.js$/,
+        enforce: 'pre',
+        include: path.resolve(__dirname, 'src'),
+        exclude: /node_modules/,
+        use: {
+          loader: 'eslint-loader'
+        }
+      },
       {
         test: /\.js$/,
         use: {
@@ -68,9 +77,9 @@ module.exports = {
               plugins: [
                 require('autoprefixer')({
                   overrideBrowserslist: [
-                    "IE 10"
+                    'IE 10'
                   ]
-                }),
+                })
               ]
             }
           }
@@ -95,7 +104,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './public/index.html',
       minify: {
-        removeAttributeQuotes: true,
+        removeAttributeQuotes: true
       },
       hash: true
     }),

@@ -2599,6 +2599,7 @@ function gen(params) {
   }, _marked);
 }
 
+console.log(b);
 console.log(gen().next());
 '1234'.includes('1');
 module.exports = 'a.js';
