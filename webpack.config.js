@@ -117,6 +117,9 @@ module.exports = {
       $: 'jquery'
     })
   ],
+  externals: {
+    jquery: 'jQuery'
+  },
   // 开发服务配置
   devServer: {
     port: 3000,
