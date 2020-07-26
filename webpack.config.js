@@ -1,14 +1,18 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 module.exports = {
-  mode: 'development', // development or production
+  mode: 'production', // development or production
   entry: './src/index.js',
   output: {
     filename: 'bundle.js',
     // 路径必须是绝对路径
     path: path.resolve(__dirname, 'dist')
+  },
+  optimization: {
+    minimizer: [new OptimizeCSSAssetsPlugin()],
   },
   module: {
     rules: [
