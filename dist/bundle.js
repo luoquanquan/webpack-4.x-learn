@@ -1357,6 +1357,7 @@ function gen(params) {
 }
 
 console.log(gen().next());
+'1234'.includes('1');
 module.exports = 'a.js';
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../node_modules/webpack/buildin/harmony-module.js */ "./node_modules/webpack/buildin/harmony-module.js")(module)))
 

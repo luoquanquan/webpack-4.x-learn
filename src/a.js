@@ -10,4 +10,6 @@ function * gen(params) {
 
 console.log(gen().next())
 
+'1234'.includes('1')
+
 module.exports = 'a.js'
