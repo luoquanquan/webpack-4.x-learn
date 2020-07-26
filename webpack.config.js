@@ -42,9 +42,12 @@ module.exports = {
                   loose: true
                 }
               ],
+              "@babel/plugin-transform-runtime"
             ]
           }
-        }
+        },
+        include: path.resolve(__dirname, 'src'),
+        exclude: /node_modules/
       },
       {
         test: /\.css$/,
