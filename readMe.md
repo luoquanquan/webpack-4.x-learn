@@ -63,3 +63,17 @@ new webpack.ProvidePlugin({
   $: 'jquery'
 })
 ```
+
+### 全局变量(第三方库)引入的方法
+
+- `expose-loader` 暴露模块到 window 上
+- `ProvidePlugin` 给每个模块提供一个局部变量
+- 通过 cdn 引入, 并配置 `externals` 实现第三方库的外部化
+
+### 图片打包
+
+#### 三种方案
+
+- js 创建图片并引入
+- css background-image 引入
+- img 标签
