@@ -500,6 +500,33 @@ module.exports = function (list, options) {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
+var _marked = /*#__PURE__*/regeneratorRuntime.mark(gen);
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var B = function B() {
+  _classCallCheck(this, B);
+};
+
+var b = new B();
+
+function gen(params) {
+  return regeneratorRuntime.wrap(function gen$(_context) {
+    while (1) {
+      switch (_context.prev = _context.next) {
+        case 0:
+          _context.next = 2;
+          return 1;
+
+        case 2:
+        case "end":
+          return _context.stop();
+      }
+    }
+  }, _marked);
+}
+
+console.log(gen().next());
 module.exports = 'a.js';
 
 /***/ }),
@@ -526,8 +553,6 @@ var _class, _temp;
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 var a = __webpack_require__(/*! ./a */ "./src/a.js");
 
 __webpack_require__(/*! ./index.css */ "./src/index.css");
@@ -543,7 +568,7 @@ fn();
 var A = log(_class = (_temp = function A() {
   _classCallCheck(this, A);
 
-  _defineProperty(this, "a", 1);
+  this.a = 1;
 } // 等同于
 // constructor() {
 //   this.a = 1
