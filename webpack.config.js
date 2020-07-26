@@ -2,6 +2,7 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const TerserJSPlugin = require('terser-webpack-plugin');
 
 module.exports = {
   mode: 'production', // development or production
@@ -12,7 +13,10 @@ module.exports = {
     path: path.resolve(__dirname, 'dist')
   },
   optimization: {
-    minimizer: [new OptimizeCSSAssetsPlugin()],
+    minimizer: [
+      new OptimizeCSSAssetsPlugin(),
+      new TerserJSPlugin()
+    ],
   },
   module: {
     rules: [

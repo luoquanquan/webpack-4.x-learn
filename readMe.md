@@ -32,3 +32,6 @@ plugins: [
 ```
 `postcss-loader`: `css-loader` 前, 用于预处理 css
 `autoprefixer`: postcss-loader 插件, 为 css 属性前缀
+`optimize-css-assets-webpack-plugin`: 压缩 css 的插件, 因为使用该插件压缩 css 需要重写 `optimization > minimizer`, 导致 webpack 自带的 js 压缩能力失效, 所以需要引入 js 压缩.
+`uglifyjs-webpack-plugin`: 压缩 js 文件的插件, 压缩 js 前需要先利用 babel 将 es6+ 语法转码
+`terser-webpack-plugin`: 压缩 js 文件的插件, 支持 es6+ js 文件直接压缩
