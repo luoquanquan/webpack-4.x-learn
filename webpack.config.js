@@ -1,4 +1,5 @@
 const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   mode: 'development', // development or production
@@ -8,6 +9,9 @@ module.exports = {
     // 路径必须是绝对路径
     path: path.resolve(__dirname, 'dist')
   },
+  plugins: [
+    new HtmlWebpackPlugin()
+  ],
   // 开发服务配置
   devServer: {
     port: 3000,
@@ -15,6 +19,6 @@ module.exports = {
     // 静态文件服务托管的目录, 默认是当前目录
     contentBase: './dist',
     // gzip
-    compress: true
+    compress: false
   }
 }
