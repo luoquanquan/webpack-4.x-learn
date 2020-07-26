@@ -1,7 +1,8 @@
 // eslint-disable-next-line
 console.log($)
 console.log(window.$)
-
+// eslint-disable-next-line
+console.log(window.$ === $)
 // const a = require('./a')
 // require('./index.css')
 // require('./index.less')
