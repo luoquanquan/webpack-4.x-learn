@@ -86,14 +86,25 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./src/a.js":
+/*!******************!*\
+  !*** ./src/a.js ***!
+  \******************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = 'a.js'\n\n\n//# sourceURL=webpack:///./src/a.js?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-eval("console.log('hello world~')\n\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("const a = __webpack_require__(/*! ./a */ \"./src/a.js\")\n\nconsole.log(a)\n\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ })
 
