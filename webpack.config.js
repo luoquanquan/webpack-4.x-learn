@@ -5,8 +5,9 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserJSPlugin = require('terser-webpack-plugin');
 
 module.exports = {
-  mode: 'production', // development or production
+  mode: 'development', // development or production
   entry: './src/index.js',
+  devtool: false,
   output: {
     filename: 'bundle.js',
     // 路径必须是绝对路径

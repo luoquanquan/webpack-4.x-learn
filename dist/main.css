@@ -1,1 +1,11 @@
-body{color:coral;transform:rotate(45deg);display:-ms-flexbox;display:flex;background-color:#0ff}
+body {
+  color: coral;
+}
+
+body {
+  transform: rotate(45deg);
+  display: -ms-flexbox;
+  display: flex;
+  background-color: aqua;
+}
+
