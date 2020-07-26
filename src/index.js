@@ -1,4 +1,4 @@
-require('@babel/polyfill')
+import "core-js";
 const a = require('./a')
 require('./index.css')
 require('./index.less')

@@ -38,6 +38,7 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.10.4",
-    "@babel/runtime": "^7.10.5"
+    "@babel/runtime": "^7.10.5",
+    "core-js": "^3.6.5"
   }
 }
