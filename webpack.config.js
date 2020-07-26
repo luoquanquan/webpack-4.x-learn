@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const TerserJSPlugin = require('terser-webpack-plugin')
+const webpack = require('webpack')
 
 module.exports = {
   mode: 'development', // development or production
@@ -21,13 +22,6 @@ module.exports = {
   },
   module: {
     rules: [
-      {
-        test: require.resolve('jquery'),
-        loader: 'expose-loader',
-        options: {
-          exposes: ['$', 'jQuery']
-        }
-      },
       {
         test: /\.js$/,
         enforce: 'pre',
@@ -117,6 +111,10 @@ module.exports = {
     }),
     new MiniCssExtractPlugin({
       filename: 'main.css'
+    }),
+    // 在每个模块中都注入 $
+    new webpack.ProvidePlugin({
+      $: 'jquery'
     })
   ],
   // 开发服务配置

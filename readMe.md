@@ -57,3 +57,9 @@ plugins: [
 `@babel/plugin-transform-runtime` & `@babel/runtime`: 用来重用 babel 注入 js 文件中的代码, 解决 callCheck 定义多次的问题 [文档](https://babeljs.io/docs/en/babel-plugin-transform-runtime#docsNav)
 `core-js`: [github](https://github.com/zloirock/core-js)
 `expose-loader`: The expose-loader loader allows to expose a module (in whole or in part) to global object (self, window and global).
+`webpack.ProvidePlugin`: 在每个模块中注入指定模块
+```js
+new webpack.ProvidePlugin({
+  $: 'jquery'
+})
+```
