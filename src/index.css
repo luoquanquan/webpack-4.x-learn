@@ -1,5 +1,7 @@
 @import './a.css';
 
 body {
+  transform: rotate(45deg);
+  display: flex;
   background-color: aqua;
 }

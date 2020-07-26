@@ -9,11 +9,8 @@
 #### 样式处理
 
 `style-loader`: 把 css 作为 style 标签添加到 html 的 head 标签中
-
 `css-loader`: 解析 **@import**(css 原生支持的模块化) 语法
-
 `less-loader`: 配合 `less` 处理 less 语法 `less -> css`
-
 `mini-css-extract-plugin`: 提取 css 文件为单独文件, 不打包到 js 模块中
 ```js
 module: {
@@ -31,5 +28,7 @@ plugins: [
   new MiniCssExtractPlugin({
     filename: 'main.css'
   })
-],
+]
 ```
+`postcss-loader`: `css-loader` 前, 用于预处理 css
+`autoprefixer`: postcss-loader 插件, 为 css 属性前缀

@@ -17,7 +17,19 @@ module.exports = {
         use: [
           MiniCssExtractPlugin.loader,
           // 处理 @import 语法
-          'css-loader'
+          'css-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              plugins: [
+                require('autoprefixer')({
+                  overrideBrowserslist: [
+                    "IE 10"
+                  ]
+                }),
+              ]
+            }
+          }
         ]
       },
       {
@@ -26,7 +38,7 @@ module.exports = {
           // 把 css 作为 style 标签添加到 head 中
           {
             loader: 'style-loader',
-            options: { }
+            options: {}
           },
           // 处理 @import 语法
           'css-loader',

@@ -3,7 +3,9 @@ body {
 }
 
 body {
-  background-color: aqua;
   transform: rotate(45deg);
+  display: -ms-flexbox;
+  display: flex;
+  background-color: aqua;
 }
 
