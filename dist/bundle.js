@@ -522,6 +522,12 @@ module.exports = 'a.js';
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+var _class, _temp;
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 var a = __webpack_require__(/*! ./a */ "./src/a.js");
 
 __webpack_require__(/*! ./index.css */ "./src/index.css");
@@ -533,6 +539,24 @@ var fn = function fn() {
 };
 
 fn();
+
+var A = log(_class = (_temp = function A() {
+  _classCallCheck(this, A);
+
+  _defineProperty(this, "a", 1);
+} // 等同于
+// constructor() {
+//   this.a = 1
+// }
+, _temp)) || _class;
+
+var tempa = new A();
+console.log(tempa);
+
+function log(target) {
+  console.log("\u5F53\u524D\u65F6\u95F4 ".concat(Date.now(), ": debug \u7684\u6570\u636E\u662F target: "), target);
+}
+
 console.log(a);
 
 /***/ }),

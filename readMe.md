@@ -39,3 +39,10 @@ plugins: [
 ### js 文件处理
 
 #### babel 转化 es6+ 语法到浏览器可执行的版本
+
+`babel-core`: babel 核心代码库, 实现了 js 转码的能力
+`babel-loader`: webpack 辅助工具, 用与实现 webpack 和 `babel-core` 的链接
+`babel-plugin/xxx`: babel 插件, 用于转化某个 es6+ 语法的新特性
+`babel-presets`: babel 插件的预设, 相当于是一个插件的集合
+`@babel/plugin-proposal-decorators`: 类装饰器语法转码 [文档](https://babel.docschina.org/docs/en/next/babel-plugin-proposal-decorators)
+`@babel/plugin-proposal-class-properties` 类属性转码 [文档](https://babel.docschina.org/docs/en/babel-plugin-proposal-class-properties)
