@@ -1,3 +1,4 @@
+require('@babel/polyfill')
 const a = require('./a')
 require('./index.css')
 require('./index.less')
