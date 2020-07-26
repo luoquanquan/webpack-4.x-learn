@@ -1,4 +1,5 @@
-import $ from 'jquery'
+// eslint-disable-next-line
+import $ from 'expose-loader?exposes[]=$&exposes[]=jQuery!jquery'
 console.log($)
 console.log(window.$)
 
