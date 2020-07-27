@@ -101,7 +101,12 @@ module.exports = {
       },
       {
         test: /\.png$/,
-        use: 'file-loader'
+        use: {
+          loader: 'url-loader',
+          options: {
+            limit: 2 * 1024
+          }
+        }
       }
     ]
   },
