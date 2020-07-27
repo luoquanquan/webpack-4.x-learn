@@ -11,6 +11,7 @@ module.exports = {
   devtool: false,
   output: {
     filename: 'bundle.js',
+    publicPath: 'http://127.0.0.1:8080/',
     // 路径必须是绝对路径
     path: path.resolve(__dirname, 'dist')
   },
