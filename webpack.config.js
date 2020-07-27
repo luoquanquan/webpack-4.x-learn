@@ -104,7 +104,8 @@ module.exports = {
         use: {
           loader: 'url-loader',
           options: {
-            limit: 2 * 1024
+            limit: 2 * 1024,
+            outputPath: '/img/'
           }
         }
       }
