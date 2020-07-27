@@ -145,7 +145,7 @@ document.body.append(img);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "/img/ffc0012c9df2e464bbdbd1eb65e99f86.png");
+/* harmony default export */ __webpack_exports__["default"] = ("http://localhost:8080/ffc0012c9df2e464bbdbd1eb65e99f86.png");
 
 /***/ })
 

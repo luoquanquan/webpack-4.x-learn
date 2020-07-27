@@ -105,7 +105,8 @@ module.exports = {
           loader: 'url-loader',
           options: {
             limit: 2 * 1024,
-            outputPath: '/img/'
+            outputPath: '/img/',
+            publicPath: 'http://localhost:8080/'
           }
         }
       }
