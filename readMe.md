@@ -75,6 +75,6 @@ new webpack.ProvidePlugin({
 
 #### 三种方案
 
-- js 创建图片并引入
+- js 创建图片并引入(file-loader 回拷贝图片, 并把生成图片的路径返回回来)
 - css background-image 引入
 - img 标签
