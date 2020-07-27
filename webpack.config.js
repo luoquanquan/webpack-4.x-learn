@@ -69,7 +69,11 @@ module.exports = {
       {
         test: /\.css$/,
         use: [
-          MiniCssExtractPlugin.loader,
+          // 把 css 作为 style 标签添加到 head 中
+          {
+            loader: 'style-loader',
+            options: {}
+          },
           // 处理 @import 语法
           'css-loader',
           {
@@ -89,11 +93,7 @@ module.exports = {
       {
         test: /\.less$/,
         use: [
-          // 把 css 作为 style 标签添加到 head 中
-          {
-            loader: 'style-loader',
-            options: {}
-          },
+          MiniCssExtractPlugin.loader,
           // 处理 @import 语法
           'css-loader',
           'less-loader'
