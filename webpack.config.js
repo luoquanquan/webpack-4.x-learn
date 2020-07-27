@@ -122,7 +122,7 @@ module.exports = {
       hash: true
     }),
     new MiniCssExtractPlugin({
-      filename: 'main.css'
+      filename: 'css/main.css'
     }),
     // 在每个模块中都注入 $
     new webpack.ProvidePlugin({
