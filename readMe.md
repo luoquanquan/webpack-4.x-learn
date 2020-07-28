@@ -88,4 +88,6 @@ new webpack.ProvidePlugin({
 - `cheap-module-source-map`: 不会产生列, 单独的映射文件
 - `cheap-module-eval-source-map`: 不会生成单独文件, 不会产生列
 
+### 常用插件
 
+- `clean-webpack-plugin`: 清理生成代码

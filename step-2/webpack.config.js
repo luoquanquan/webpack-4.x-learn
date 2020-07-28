@@ -1,5 +1,6 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   mode: 'production',
@@ -7,7 +8,7 @@ module.exports = {
   entry: {
     home: './src/index.js'
   },
-  watch: true,
+  watch: false,
   watchOptions: {
     // 每秒问我 1e3 次
     poll: 1e3,
@@ -38,5 +39,6 @@ module.exports = {
       template: './public/index.html',
       filename: 'home.html'
     }),
+    new CleanWebpackPlugin()
   ]
 }
