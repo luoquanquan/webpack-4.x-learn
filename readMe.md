@@ -80,3 +80,12 @@ new webpack.ProvidePlugin({
 - js 创建图片并引入(file-loader 回拷贝图片, 并把生成图片的路径返回回来)
 - css background-image 引入
 - img 标签
+
+### sourceMap
+
+- `sourcemap`: 生成独立的 map 文件, 能标识当前报错的行和列
+- `eval-source-map`: 不会产生单独文件, 但是可以显示出报错的行和列
+- `cheap-module-source-map`: 不会产生列, 单独的映射文件
+- `cheap-module-eval-source-map`: 不会生成单独文件, 不会产生列
+
+

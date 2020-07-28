@@ -2,10 +2,23 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-  mode: 'development',
+  mode: 'production',
+  devtool: 'sourcemap',
   entry: {
-    home: './src/index.js',
-    other: './src/other.js'
+    home: './src/index.js'
+  },
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env']
+          }
+        }
+      }
+    ]
   },
   output: {
     filename: '[name].js',
@@ -14,13 +27,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: './public/index.html',
-      filename: 'home.html',
-      chunks: ['home']
+      filename: 'home.html'
     }),
-    new HtmlWebpackPlugin({
-      template: './public/index.html',
-      filename: 'other.html',
-      chunks: ['other']
-    })
   ]
 }
