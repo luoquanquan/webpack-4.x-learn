@@ -91,3 +91,5 @@ new webpack.ProvidePlugin({
 ### 常用插件
 
 - `clean-webpack-plugin`: 清理生成代码
+- `copy-webpack-plugin`: 拷贝插件
+- `BannerPlugin`: 文件头部

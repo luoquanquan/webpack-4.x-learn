@@ -2,6 +2,7 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
+const webpack = require('webpack')
 
 module.exports = {
   mode: 'production',
@@ -46,5 +47,6 @@ module.exports = {
         { from: './docs', to: 'docs' }
       ],
     }),
+    new webpack.BannerPlugin('圈圈制作')
   ]
 }
