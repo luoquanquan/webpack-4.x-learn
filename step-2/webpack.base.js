@@ -5,8 +5,6 @@ const CopyPlugin = require('copy-webpack-plugin');
 const webpack = require('webpack')
 
 module.exports = {
-  mode: 'production',
-  devtool: 'sourcemap',
   entry: {
     home: './src/index.js'
   },
@@ -36,22 +34,6 @@ module.exports = {
       }
     ]
   },
-  devServer: {
-    // 配置代理
-    proxy: {
-      '/api': {
-        target: 'http://localhost:3000',
-        pathRewrite: {
-          '/api': ''
-        }
-      }
-    },
-    before(app) {
-      app.get('/user', (request, response) => {
-        response.json({name: 'quanquan - before'})
-      })
-    }
-  },
   output: {
     filename: '[name].js',
     path: path.resolve(__dirname, 'dist')
@@ -79,9 +61,6 @@ module.exports = {
         { from: './docs', to: 'docs' }
       ],
     }),
-    new webpack.BannerPlugin('圈圈制作'),
-    new webpack.DefinePlugin({
-      DEV: 'true'
-    })
+    new webpack.BannerPlugin('圈圈制作')
   ]
 }

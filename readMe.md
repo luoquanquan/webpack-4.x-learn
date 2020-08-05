@@ -157,3 +157,8 @@ app.use(WDM(compiler))
 ### 注入环境变量
 
 利用 new webpack.DefinePlugin 可以实现环境变量的注入, 需要注意的是和一般的模板语法一致, 如果想在注入的变量中插入一个字符串, 需要利用 JSON.stringify()
+
+### 区分开发环境和生产环境
+
+- 分别创建 `webpack.dev.js` `webpack.prod.js`
+- 使用命令 `npm run build  -- --config=webpack.prod.js` 实现指定环境执行 webpack
