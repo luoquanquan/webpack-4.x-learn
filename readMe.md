@@ -93,3 +93,55 @@ new webpack.ProvidePlugin({
 - `clean-webpack-plugin`: 清理生成代码
 - `copy-webpack-plugin`: 拷贝插件
 - `BannerPlugin`: 文件头部
+
+### 实现跨域
+
+- 使用 `webpack-dev-server` 实现跨域代理服务器
+  - 当不需要 rewrite 路径的时候
+    ```js
+    devServer: {
+      // 配置代理
+      proxy: {
+        '/api': 'http://localhost:3000'
+      }
+    },
+    ```
+  - 需要使用 rewrite
+    ```js
+    devServer: {
+      // 配置代理
+      proxy: {
+        '/api': {
+          target: 'http://localhost:3000',
+          pathRewrite: {
+            '/api': ''
+          }
+        }
+      }
+    },
+    ```
+- 前端 mock 数据
+  ```js
+  devServer: {
+    // 配置代理
+    proxy: {
+      // ....,
+      before(app) {
+        app.get('/user', (request, response) => {
+          response.json({name: 'quanquan - before'})
+        })
+      }
+    },
+  }
+  ```
+- 后端代码中启动 webpack, 共用后端端口, 后端代码中加入以下代码即可
+```js
+const webpack = require('webpack')
+const WDM = require('webpack-dev-middleware')
+const wpConfig = require('./webpack.config')
+
+const app = express()
+const compiler = webpack(wpConfig)
+
+app.use(WDM(compiler))
+```
