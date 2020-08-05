@@ -79,6 +79,9 @@ module.exports = {
         { from: './docs', to: 'docs' }
       ],
     }),
-    new webpack.BannerPlugin('圈圈制作')
+    new webpack.BannerPlugin('圈圈制作'),
+    new webpack.DefinePlugin({
+      DEV: 'true'
+    })
   ]
 }
