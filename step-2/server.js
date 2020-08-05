@@ -1,7 +1,8 @@
 const express = require('express')
 const app = express()
 
-app.get('/api/user', (request, response) => {
+app.get('/user', (request, response) => {
+  console.log('接收到了请求~')
   response.json({name: 'quanquan'})
 })
 
