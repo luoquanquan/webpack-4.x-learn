@@ -145,3 +145,11 @@ const compiler = webpack(wpConfig)
 
 app.use(WDM(compiler))
 ```
+
+### resolve 字段常用的情况
+
+- modules 寻找第三方库 or 本地自行开发库的路径
+- extensions 默认添加的文件后缀名 list
+- alias 别名
+- mainFields 多导出出口的库, 指定出口引入的顺序
+- mainFiles 指定出口文件的名字, 目前没用到过

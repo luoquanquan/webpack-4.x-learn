@@ -29,6 +29,10 @@ module.exports = {
             presets: ['@babel/preset-env']
           }
         }
+      },
+      {
+        test: /\.css/,
+        use: ['style-loader', 'css-loader']
       }
     ]
   },
@@ -51,6 +55,18 @@ module.exports = {
   output: {
     filename: '[name].js',
     path: path.resolve(__dirname, 'dist')
+  },
+  resolve: {
+    modules: [
+      path.resolve(__dirname, 'node_modules')
+    ],
+    // alias: {
+    //   bootstrap: 'bootstrap/dist/css/bootstrap.css'
+    // },
+    // mainFields: ['style', 'main']
+    // 入口文件的名字
+    // mainFiles: []
+    extensions: ['.js', '.css', '.json']
   },
   plugins: [
     new HtmlWebpackPlugin({
