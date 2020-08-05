@@ -32,6 +32,12 @@ module.exports = {
       }
     ]
   },
+  devServer: {
+    // 配置代理
+    proxy: {
+      '/api': 'http://localhost:3000'
+    }
+  },
   output: {
     filename: '[name].js',
     path: path.resolve(__dirname, 'dist')
