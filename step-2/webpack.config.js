@@ -41,6 +41,11 @@ module.exports = {
           '/api': ''
         }
       }
+    },
+    before(app) {
+      app.get('/user', (request, response) => {
+        response.json({name: 'quanquan - before'})
+      })
     }
   },
   output: {
