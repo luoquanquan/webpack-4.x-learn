@@ -1,6 +1,7 @@
 const path = require('path')
 const HWP = require('html-webpack-plugin')
 const webpack = require('webpack')
+const HappyPack = require('happypack')
 
 module.exports = {
   mode: 'development',
@@ -16,19 +17,23 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         include: path.resolve(__dirname, 'src'),
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: [
-              '@babel/preset-env',
-              '@babel/preset-react',
-            ]
-          }
-        }
+        use: 'happypack/loader?id=js'
       }
     ]
   },
   plugins: [
+    new HappyPack({
+      id: 'js',
+      use: [{
+        loader: 'babel-loader',
+        options: {
+          presets: [
+            '@babel/preset-env',
+            '@babel/preset-react',
+          ]
+        }
+      }]
+    }),
     new webpack.DllReferencePlugin({
       manifest: path.resolve(__dirname, 'dist', 'manifest.json')
     }),

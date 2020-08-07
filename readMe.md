@@ -180,3 +180,7 @@ app.use(WDM(compiler))
 ### 动态链接库(DllPlugin / DllReferencePlugin)
 
 项目中不怎么变化的第三方库可以使用 DllPlugin 进行单独的打包并生成 `manifest.json`, 保证项目中业务代码不至于太大
+
+### happypack
+
+使用 happypack 可以开启多线程打包, 但是当项目较小的时候, 并不会明显减小打包时间
