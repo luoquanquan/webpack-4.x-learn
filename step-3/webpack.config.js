@@ -29,6 +29,9 @@ module.exports = {
     ]
   },
   plugins: [
+    new webpack.DllReferencePlugin({
+      manifest: path.resolve(__dirname, 'dist', 'manifest.json')
+    }),
     new HWP({
       template: path.resolve(__dirname, './public/index.html')
     }),

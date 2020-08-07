@@ -176,3 +176,7 @@ app.use(WDM(compiler))
 ### IgnorePlugin
 
 项目中使用了 `moment` 类库时, 默认会引入全部语言包, 可以使用 IgnorePlugin 对于不用的语言包进行删除, 并手动引入需要的语言包...
+
+### 动态链接库(DllPlugin / DllReferencePlugin)
+
+项目中不怎么变化的第三方库可以使用 DllPlugin 进行单独的打包并生成 `manifest.json`, 保证项目中业务代码不至于太大
