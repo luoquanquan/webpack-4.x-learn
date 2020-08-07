@@ -1,5 +1,6 @@
 const path = require('path')
 const HWP = require('html-webpack-plugin')
+const webpack = require('webpack')
 
 module.exports = {
   mode: 'development',
@@ -30,6 +31,7 @@ module.exports = {
   plugins: [
     new HWP({
       template: path.resolve(__dirname, './public/index.html')
-    })
+    }),
+    new webpack.IgnorePlugin(/\.\/locale/, /moment/)
   ]
 }
