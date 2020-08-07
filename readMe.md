@@ -172,3 +172,7 @@ app.use(WDM(compiler))
 ### exclude / include
 
 在 loader 的配置中添加, exclude / include 可以大幅减小打包的时长. 在极简的项目中打包时间从之前的 2 秒缩减到了最后的 500ms
+
+### IgnorePlugin
+
+项目中使用了 `moment` 类库时, 默认会引入全部语言包, 可以使用 IgnorePlugin 对于不用的语言包进行删除, 并手动引入需要的语言包...
