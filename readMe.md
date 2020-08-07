@@ -162,3 +162,9 @@ app.use(WDM(compiler))
 
 - 分别创建 `webpack.dev.js` `webpack.prod.js`
 - 使用命令 `npm run build  -- --config=webpack.prod.js` 实现指定环境执行 webpack
+
+## webpack 优化
+
+### module.noParse
+
+使用 module.noParse 排除不需要进行递归依赖的模块, 使用当项目中引用了类似 jQ 这种不依赖其他模块的代码库时, 可以减小打包的时间
