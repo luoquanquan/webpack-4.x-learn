@@ -168,3 +168,7 @@ app.use(WDM(compiler))
 ### module.noParse
 
 使用 module.noParse 排除不需要进行递归依赖的模块, 使用当项目中引用了类似 jQ 这种不依赖其他模块的代码库时, 可以减小打包的时间
+
+### exclude / include
+
+在 loader 的配置中添加, exclude / include 可以大幅减小打包的时长. 在极简的项目中打包时间从之前的 2 秒缩减到了最后的 500ms
