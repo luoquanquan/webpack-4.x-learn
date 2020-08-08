@@ -19,6 +19,14 @@ module.exports = {
           minSize: 0,
           minChunks: 2,
           chunks: 'initial'
+        },
+        // 抽离第三方代码
+        vender: {
+          priority: 1,
+          test: /node_modules/,
+          minSize: 0,
+          minChunks: 2,
+          chunks: 'initial'
         }
       }
     }

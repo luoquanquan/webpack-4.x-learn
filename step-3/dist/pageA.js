@@ -148,7 +148,7 @@
 /******/
 /******/
 /******/ 	// add entry module to deferred list
-/******/ 	deferredModules.push(["./src/pageA.js","common~pageA~pageB"]);
+/******/ 	deferredModules.push(["./src/pageA.js","vender~pageA~pageB","common~pageA~pageB"]);
 /******/ 	// run deferred modules when ready
 /******/ 	return checkDeferredModules();
 /******/ })
@@ -164,10 +164,25 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _mA__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./mA */ "./src/mA.js");
-/* harmony import */ var _mA__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_mA__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _mB__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./mB */ "./src/mB.js");
-/* harmony import */ var _mB__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_mB__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var echarts__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! echarts */ "./node_modules/echarts/index.js");
+/* harmony import */ var echarts__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(echarts__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _mA__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./mA */ "./src/mA.js");
+/* harmony import */ var _mA__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_mA__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _mB__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./mB */ "./src/mB.js");
+/* harmony import */ var _mB__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_mB__WEBPACK_IMPORTED_MODULE_6__);
+
+
+
+
+
 
 
 console.log('pageA ---');
