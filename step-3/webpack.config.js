@@ -4,7 +4,7 @@ const webpack = require('webpack')
 const HappyPack = require('happypack')
 
 module.exports = {
-  mode: 'development',
+  mode: 'production',
   entry: './src/index.js',
   output: {
     filename: 'bundle.js',
