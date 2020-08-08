@@ -14,25 +14,30 @@ module.exports = {
   optimization: {
     // 分割代码块
     splitChunks: {
+      automaticNameDelimiter: '-',
+      chunks: 'all',
       cacheGroups: {
         common: {
+          automaticNamePrefix: 'react-chunks-prefix',
           minSize: 0,
           minChunks: 2,
-          chunks: 'initial'
+          name: 'common'
         },
         // 抽离第三方代码
         vender: {
           priority: 1,
-          test: /node_modules/,
+          test: /[\\/]node_modules[\\/]/,
           minSize: 0,
-          minChunks: 2,
-          chunks: 'initial'
+          minChunks: 1,
+          maxSize: 1024 * 1024,
+          minSize: 1024 * 500,
+          name: 'vender'
         }
       }
     }
   },
   output: {
-    filename: '[name].js',
+    filename: '[name].[contenthash:4].js',
     path: path.resolve(__dirname, 'dist')
   },
   module: {
