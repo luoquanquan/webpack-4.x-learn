@@ -203,3 +203,15 @@ console.log(a + b + c)
 打包后的结果为:
 console.log(6)
 ```
+
+### 抽离公共(三方)代码
+
+公共代码[提交历史](https://gitee.com/quanquandequan/webpack-4.0-learn/commit/fc236122f67b8be7c17de23c5988d6243bbaaf71)
+
+三方代码[提交历史](https://gitee.com/quanquandequan/webpack-4.0-learn/commit/1a78a03ced27627d285b7b17d4fb5418ce536dcf)
+
+三方代码过大时候还可以指定每个包的大小[提交历史](https://gitee.com/quanquandequan/webpack-4.0-learn/commit/58c9a545ca494a6ca994088acd528d8cab1fb094)
+
+### 懒加载
+
+通过 import() 实现[懒加载](https://gitee.com/quanquandequan/webpack-4.0-learn/commit/1082f814145f336cdebcd2423c33dbbcbd1d6e9f)
