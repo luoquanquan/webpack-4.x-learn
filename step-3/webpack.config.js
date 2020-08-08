@@ -5,9 +5,12 @@ const HappyPack = require('happypack')
 
 module.exports = {
   mode: 'production',
-  entry: './src/index.js',
+  entry: {
+    pageA: './src/pageA.js',
+    pageB: './src/pageB.js',
+  },
   output: {
-    filename: 'bundle.js',
+    filename: '[name].js',
     path: path.resolve(__dirname, 'dist')
   },
   module: {
@@ -34,9 +37,9 @@ module.exports = {
         }
       }]
     }),
-    new webpack.DllReferencePlugin({
-      manifest: path.resolve(__dirname, 'dist', 'manifest.json')
-    }),
+    // new webpack.DllReferencePlugin({
+    //   manifest: path.resolve(__dirname, 'dist', 'manifest.json')
+    // }),
     new HWP({
       template: path.resolve(__dirname, './public/index.html')
     }),
