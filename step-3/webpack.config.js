@@ -7,10 +7,7 @@ const {CleanWebpackPlugin} = require('clean-webpack-plugin')
 module.exports = {
   mode: 'development',
   devtool: false,
-  entry: {
-    pageA: './src/pageA.js',
-    pageB: './src/pageB.js',
-  },
+  entry: './src/index.js',
   optimization: {
     // 分割代码块
     splitChunks: {
@@ -37,8 +34,9 @@ module.exports = {
     }
   },
   output: {
-    filename: '[name].[contenthash:4].js',
-    path: path.resolve(__dirname, 'dist')
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist'),
+    chunkFilename: '[name].chunk.js'
   },
   module: {
     noParse: /jquery/,
