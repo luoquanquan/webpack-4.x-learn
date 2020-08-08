@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack",
-    "dll": "webpack --config=webpack.dll.js"
+    "dll": "webpack --config=webpack.dll.js",
+    "dev": "webpack-dev-server"
   },
   "keywords": [],
   "author": "",
@@ -19,7 +20,8 @@
     "happypack": "^5.0.1",
     "html-webpack-plugin": "^4.3.0",
     "webpack": "^4.44.1",
-    "webpack-cli": "^3.3.12"
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
     "echarts": "^4.8.0",

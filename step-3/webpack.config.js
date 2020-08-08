@@ -49,6 +49,10 @@ module.exports = {
       }
     ]
   },
+  devServer: {
+    port: 3000,
+    hot: true
+  },
   plugins: [
     new HappyPack({
       id: 'js',
@@ -69,6 +73,10 @@ module.exports = {
       template: path.resolve(__dirname, './public/index.html')
     }),
     new webpack.IgnorePlugin(/\.\/locale/, /moment/),
-    new CleanWebpackPlugin()
+    new CleanWebpackPlugin(),
+    // 打印更新模块的路径
+    new webpack.NamedChunksPlugin(),
+    // 热更新模块
+    new webpack.HotModuleReplacementPlugin()
   ]
 }
