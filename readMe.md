@@ -1,6 +1,12 @@
 ## webpack sys learn
 
-## 第一阶段
+## 学习目录
+
+- step-1 主要是 webpack 的基础配置
+- step-2 主要是 webpack 的进阶配置
+- step-3 主要是 webpack 的优化
+
+## 基础配置
 
 ### loader
 
@@ -80,6 +86,8 @@ new webpack.ProvidePlugin({
 - js 创建图片并引入(file-loader 回拷贝图片, 并把生成图片的路径返回回来)
 - css background-image 引入
 - img 标签
+
+## 打包进阶
 
 ### sourceMap
 
