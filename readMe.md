@@ -184,3 +184,22 @@ app.use(WDM(compiler))
 ### happypack
 
 使用 happypack 可以开启多线程打包, 但是当项目较小的时候, 并不会明显减小打包时间
+
+### tree-shaking 树摇
+
+树摇, 生产环境下打包(压缩 js), 使用 es6 模块化导入的模块, webpack 会自动删除掉没有用到的方法定义. 就算是 `export default {}` 里边用不到的属性也是可以删除的, 但是使用 commonjs 方法导入的模块不具备此功能
+
+### scope-hosting 作用域提升
+
+webpack 中会自动简化可以简化的代码, 实现代码的预执行~
+
+```js
+const a = 1
+const b = 2
+const c = 3
+
+console.log(a + b + c)
+
+打包后的结果为:
+console.log(6)
+```
