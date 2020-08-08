@@ -215,3 +215,9 @@ console.log(6)
 ### 懒加载
 
 通过 import() 实现[懒加载](https://gitee.com/quanquandequan/webpack-4.0-learn/commit/1082f814145f336cdebcd2423c33dbbcbd1d6e9f)
+
+### 热更新
+
+- devServer.hot: true
+- webpack.NamedChunksPlugin
+- webpack.HotModuleReplacementPlugin
