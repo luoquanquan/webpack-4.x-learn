@@ -2,12 +2,26 @@ const path = require('path')
 const HWP = require('html-webpack-plugin')
 const webpack = require('webpack')
 const HappyPack = require('happypack')
+const {CleanWebpackPlugin} = require('clean-webpack-plugin')
 
 module.exports = {
-  mode: 'production',
+  mode: 'development',
+  devtool: false,
   entry: {
     pageA: './src/pageA.js',
     pageB: './src/pageB.js',
+  },
+  optimization: {
+    // 分割代码块
+    splitChunks: {
+      cacheGroups: {
+        common: {
+          minSize: 0,
+          minChunks: 2,
+          chunks: 'initial'
+        }
+      }
+    }
   },
   output: {
     filename: '[name].js',
@@ -43,6 +57,7 @@ module.exports = {
     new HWP({
       template: path.resolve(__dirname, './public/index.html')
     }),
-    new webpack.IgnorePlugin(/\.\/locale/, /moment/)
+    new webpack.IgnorePlugin(/\.\/locale/, /moment/),
+    new CleanWebpackPlugin()
   ]
 }
