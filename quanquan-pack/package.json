@@ -1,0 +1,15 @@
+{
+  "name": "quanquan-pack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "quanquan-pack": "./bin/quanquan-pack.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
